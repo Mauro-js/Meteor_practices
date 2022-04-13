@@ -18,7 +18,7 @@ export const BrandForm = () => {
     };
    
     return (
-      <form className="brand-form" onSubmit={handleSubmit}>
+      <form className="generic-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Type to add new brand"

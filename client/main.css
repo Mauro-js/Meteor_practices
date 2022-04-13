@@ -77,12 +77,12 @@ header {
   margin-right: 1em;
 }
 
-.brand-form {
+.generic-form {
   display: flex;
   margin: 16px;
 }
 
-.brand-form > input {
+.generic-form > input {
   flex-grow: 1;
   box-sizing: border-box;
   padding: 10px 6px;
@@ -93,14 +93,24 @@ header {
   margin-right: 16px;
 }
 
-.brand-form > input:focus {
+.generic-form > input:focus {
   outline: 0;
 }
 
-.brand-form > button {
+.generic-form > button {
   min-width: 100px;
   height: 95%;
   background-color: #315481;
+}
+
+/* Product Form */
+.product-form {
+  display: block;
+  margin: 16px;
+}
+
+.title-product-form {
+  text-align: center;
 }
 
 .brand {
@@ -173,11 +183,64 @@ header {
   background-color: #62807e;
 }
 
-.user {
+.right-button {
   display: flex;
   background-color: #db2d2d;
   align-self: flex-end;
 
   margin: 8px 16px;
   font-weight: bold;
+}
+
+.header-button {
+  background-color: #916868;
+  align-self: flex-end;
+
+  margin: 2px 16px;
+  font-weight: bold;
+}
+
+.header-button-selected {
+  background-color: #db2d2d;
+}
+
+.tables{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-x:auto;
+  margin: 8px 8px;
+  background: white;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
