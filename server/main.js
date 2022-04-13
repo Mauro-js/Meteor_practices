@@ -51,7 +51,7 @@ Meteor.startup(() => {
         price: 4
       },
       {
-        name: '13/04/2022',
+        name: 'Newspaper 13/04/2022',
         brand:'NewsPaper',
         stock: 15,
         price: 2
