@@ -3,6 +3,7 @@ import { useTracker } from 'meteor/react-meteor-data';
 import { LoginForm } from './LoginForm';
 import { BrandList } from './Brand/BrandList';
 import { ProductList } from './Product/ProductList';
+import { SalesList } from './Sales/SalesList';
 
 export const App = () => {
   const user = useTracker(() => Meteor.user());
@@ -32,6 +33,7 @@ export const App = () => {
                 </header>
                 {sectionSelected === 'brands' && <BrandList />}
                 {sectionSelected === 'products' && <ProductList />}
+                {sectionSelected === 'sales' && <SalesList />}
                </>) :(
           <LoginForm />
         )}

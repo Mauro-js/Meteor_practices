@@ -105,8 +105,12 @@ header {
 
 /* Product Form */
 .product-form {
-  display: block;
+  display: flex;
   margin: 16px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
 
 .title-product-form {
@@ -218,7 +222,14 @@ th, td {
   padding: 8px;
 }
 
+.tables tr:hover {
+  cursor:pointer;
+  background-color: #d1cfcf;
+}
+
 tr:nth-child(even){background-color: #f2f2f2}
+
+li:nth-child(even){background-color: #f2f2f2}
 
 
 /* Modal Content */
@@ -228,6 +239,7 @@ tr:nth-child(even){background-color: #f2f2f2}
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  overflow-y: auto;
 }
 
 /* The Modal (background) */

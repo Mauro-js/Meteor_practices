@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { BrandMongo } from '/imports/api/brand';
 import { ProductMongo } from '../imports/api/product';
+import { SalesMongo } from '../imports/api/sales';
 
 const insertBrand = (brandText) =>
   BrandMongo.insert({
@@ -10,6 +11,8 @@ const insertBrand = (brandText) =>
   });
 
 const insertProduct = (product) => ProductMongo.insert(product);
+
+const insertSales = (sale) => SalesMongo.insert(sale);
 
 const SEED_USERNAME = 'meteorite';
 const SEED_PASSWORD = 'password';
@@ -29,7 +32,8 @@ Meteor.startup(() => {
       'Coca Cola',
       'Pepsi',
       'NewsPaper',
-      'Snacks'
+      'Snacks',
+      'Pepsi'
     ].forEach(brandText => insertBrand(brandText));
   }
 
@@ -60,6 +64,14 @@ Meteor.startup(() => {
         price: 3
       }
     ].forEach(product => insertProduct(product));
+  }
+
+  if (SalesMongo.find({}).count() === 0) {
+    insertSales({
+      products:'[{"name":"Pepsi","count":"3","price":6}]',
+      total:6,
+      createdAt: new Date()
+    });
   }
 
 });
