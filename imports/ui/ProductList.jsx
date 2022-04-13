@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { ProductMongo } from '/imports/api/product';
 import { useTracker } from 'meteor/react-meteor-data';
-import { ProductForm} from './ProductForm';
+import { ProductForm } from './ProductForm';
+
+const deleteProduct = ({ _id }) => ProductMongo.remove(_id);
 
 export const ProductList = () => {
     const products = useTracker(() => ProductMongo.find({}, { sort: { createdAt: -1 } }).fetch());
@@ -31,6 +33,6 @@ const Product = ({product}) => {
                 <td>{product.name}</td>
                 <td>{product.stock}</td>
                 <td>$ {product.price}</td>
-                <td><button className='right-button' >&times;</button></td>
+                <td><button className='right-button' onClick={ () => deleteProduct(product) }>&times;</button></td>
            </tr>
 }
