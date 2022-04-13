@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useTracker } from 'meteor/react-meteor-data';
 import { LoginForm } from './LoginForm';
-import { BrandList } from './BrandList';
-import { ProductList } from './ProductList';
+import { BrandList } from './Brand/BrandList';
+import { ProductList } from './Product/ProductList';
 
 export const App = () => {
   const user = useTracker(() => Meteor.user());
