@@ -30,7 +30,6 @@ Meteor.startup(() => {
   if (BrandMongo.find({}).count() === 0) {
     [
       'Coca Cola',
-      'Pepsi',
       'NewsPaper',
       'Snacks',
       'Pepsi'

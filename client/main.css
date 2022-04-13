@@ -14,6 +14,8 @@ body {
   margin: 0;
 
   font-size: 14px;
+  overflow-y: auto;
+
 }
 
 button {
@@ -49,6 +51,7 @@ button:focus {
   flex-grow: 1;
   overflow: auto;
   background: white;
+  margin: 8px 8px;
 }
 
 .main::-webkit-scrollbar {
@@ -77,8 +80,9 @@ header {
   margin-right: 1em;
 }
 
+/*Generic Form*/
 .generic-form {
-  display: flex;
+  display: block;
   margin: 16px;
 }
 
@@ -140,6 +144,8 @@ header {
   justify-self: flex-end;
   background-color: #ff3046;
 }
+
+/* Forms ////////////// */
 
 .filter {
   display: flex;
@@ -208,6 +214,9 @@ header {
   background-color: #db2d2d;
 }
 
+
+/*Tables /////////////////// */
+
 .tables{
   display: flex;
   flex-direction: column;
@@ -232,6 +241,9 @@ tr:nth-child(even){background-color: #f2f2f2}
 li:nth-child(even){background-color: #f2f2f2}
 
 
+
+
+
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
@@ -252,7 +264,8 @@ li:nth-child(even){background-color: #f2f2f2}
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  overflow-y: auto;
+
 }

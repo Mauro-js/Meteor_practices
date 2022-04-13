@@ -60,7 +60,7 @@ const Modal = ({brands, closeModal}) => {
               <div className="modal-content">
                 <button className='right-button' onClick={() => closeModal()}>&times;</button>
                 <h2 className="title-product-form" >Add new product</h2>
-                <form className="generic-form product-form" onSubmit={handleSubmit}>
+                <form className="generic-form" onSubmit={handleSubmit}>
                   <h4>Brand :</h4>
                   <input
                     type="text"
